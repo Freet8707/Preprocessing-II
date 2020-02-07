@@ -2,6 +2,9 @@
 
   .hdrImg {
     margin-bottom: 25px;
+    @media @mobile {
+      max-width: 100%;
+    }
   }
 
   .introPara {
@@ -13,19 +16,28 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-   
-    
+    @media @mobile {
+      .displayF(column, wrap, space-evenly, stretch);
+    }    
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @mobile {
+        width: 100%;
+        padding-bottom: 15px;
+      }
     }
-
     .img-content {
       width: 48%;
       padding-left: 1%;
-
+      @media @mobile {
+        padding: 0;
+        width: 100%;
+      }
       img {
+        @media @mobile {
+          min-width: 100%;
+        }
         border-radius: 10px;
       }
     }
@@ -38,17 +50,27 @@
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+      @media @mobile {
+        order: -1;
+      }
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+      @media @mobile {
+        padding: 0;
+      }
     }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+    @media @mobile {
+      width: 100%;
+      padding: 0 5%;
+    }
 
     img {
       border-radius: 10px;
